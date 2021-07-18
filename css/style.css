@@ -40,7 +40,7 @@ a {
       width: 1170px; } }
 
 .header {
-  height: 90vh;
+  height: 80vh;
   background-image: url("./../images/desktop/image-hero.jpg");
   background-size: cover;
   padding-top: 60px;
