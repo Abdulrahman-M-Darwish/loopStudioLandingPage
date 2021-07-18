@@ -13,7 +13,7 @@ html(lang="en")
     .header
       .container
         .content
-          .logo
+          .logo 
             img(src="./images/logo.svg", alt="logo - loopstudios")
           - let eles = ["About", "Careers", "Events", "Products", "Support"];
           .icon: img.burger(src="./images/icon-hamburger.svg", alt="icon - hamburger")
@@ -41,7 +41,6 @@ html(lang="en")
           a(href="#") See all
         .images
           .column
-            .col
               .img
                 picture
                   source(media="(min-width: 768px)", srcset="./images/desktop/image-deep-earth.jpg")
@@ -52,7 +51,6 @@ html(lang="en")
                   source(media="(min-width: 768px)", srcset="./images/desktop/image-night-arcade.jpg")
                   img.svg(src="./images/mobile/image-night-arcade.jpg", alt="galary")
                 .text Night #[br] arcade
-            .col
               .img
                 picture
                   source(media="(min-width: 768px)", srcset="./images/desktop/image-soccer-team.jpg")
@@ -64,7 +62,6 @@ html(lang="en")
                   img.svg(src="./images/mobile/image-grid.jpg", alt="galary")
                 .text The #[br] grid
           .column
-            .col
               .img
                 picture
                   source(media="(min-width: 768px)", srcset="./images/desktop/image-from-above.jpg")
@@ -75,7 +72,6 @@ html(lang="en")
                   source(media="(min-width: 768px)", srcset="./images/desktop/image-pocket-borealis.jpg")
                   img.svg(src="./images/mobile/image-pocket-borealis.jpg", alt="galary")
                 .text pocket #[br] borealis
-            .col
               .img
                 picture
                   source(media="(min-width: 768px)", srcset="./images/desktop/image-curiosity.jpg")
@@ -97,8 +93,7 @@ html(lang="en")
         .column
           .social
             each contact in contacts
-              |
-              img.icon(src="./images/icon-" + contact +".svg", alt="socialMedia - facebook")
+              .hold: img.icon(src="./images/icon-" + contact +".svg", alt="socialMedia - facebook")
           p © 2021 Loopstudios. All rights reserved.
     script(src="./js/main.js")
 

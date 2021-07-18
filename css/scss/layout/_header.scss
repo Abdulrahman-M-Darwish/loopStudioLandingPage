@@ -1,7 +1,7 @@
 .header {
-  height: 100vh;
+  height: 90vh;
   background-image: url("./../images/desktop/image-hero.jpg");
-  @include maxMedia(991) {
+  @include maxMedia(767) {
     background-image: url("./../images/mobile/image-hero.jpg");
   }
   background-size: cover;

@@ -4,8 +4,6 @@
   background-color: black;
   .container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     @include maxMedia(991) {
       flex-direction: column;
     }
@@ -32,15 +30,26 @@
         }
       }
       .social {
-        margin-bottom: 20px;
-        .icon {
+        display: flex;
+        gap: 20px;
+        .hold {
           position: relative;
-          padding-bottom: 10px;
-          &:not(:last-of-type) {
-            margin-right: 17px;
+          cursor: pointer;
+          &:hover::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            bottom: -5px;
+            left: 0;
+            height: 2px;
+            background-color: white;
           }
-          &:hover {
-            border-bottom: 2px solid #fff;
+          .icon {
+            position: relative;
+            padding-bottom: 10px;
+            &:not(:last-of-type) {
+              margin-right: 17px;
+            }
           }
         }
       }
@@ -53,7 +62,7 @@
         }
         .list-item {
           position: relative;
-          &:hover:after {
+          &:hover::after {
             content: "";
             position: absolute;
             width: 30%;
@@ -68,15 +77,7 @@
       p {
         color: $VeryDarkGray;
         margin: auto;
-        margin: 0;
-        span {
-          cursor: pointer;
-          transition: .3s;
-          &:hover {
-            color: red;
-            text-decoration: underline;
-          }
-        }
+        margin: 10px 0 0 0;
       }
     }
   }
